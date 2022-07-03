@@ -1,28 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
 
 
 @app.route('/')
-def welcome():
-    return "This is my very first flask app"
-
-
-@app.route('/cool')
-def cool():
-    return "Flask is cool"
-
-
-counter = 0
-
-
-@app.route('/view_count')
-def view_count():
-    global counter
-    counter += 1
-    return f"This page has been viewed {counter} times"
+def home():
+    return render_template('home.html', 
+                            message='Transmiting from a galaxy far, far away')
 
 
 if __name__ == '__main__':
     app.run(debug=True)
+ 
