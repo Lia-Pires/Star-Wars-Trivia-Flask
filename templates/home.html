@@ -9,6 +9,12 @@
 <body>
     <h1>Star Wars Trivia</h1>
 
-    <p>{{ message }}</p>   
+    <ul>
+        {% for question in questions %}
+        <li>
+            <a href="{{ url_for('questions_view', index=loop.index0) }}">{{ question.question }}</a>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

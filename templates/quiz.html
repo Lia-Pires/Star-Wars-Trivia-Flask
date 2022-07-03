@@ -16,5 +16,20 @@
           <p>{{ question.answer }}</p>
         </div>
       </div>
-</body>
+
+      <!-- Home Button -->
+        <button>
+        <a href=" {{ url_for('home') }} ">Home</a>
+        </button>
+        
+        <button>
+            {% if index < max_index  %}
+            <a href="{{ url_for('questions_view', index = index+1) }}">Next Question</a>
+            {% else   %}
+            <a href="{{ url_for('questions_view', index = 0) }}">Start Over</a>
+            {% endif %}
+        </button>
+     
+
+    </body>
 </html>
