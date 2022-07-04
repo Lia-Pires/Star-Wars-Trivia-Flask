@@ -1,5 +1,5 @@
-from flask import Flask, render_template, abort, jsonify, request
-from model import db
+from flask import Flask, render_template, abort, jsonify, request, redirect, url_for
+from model import db, save_db
 
 
 app = Flask(__name__)
@@ -43,7 +43,14 @@ def add_question():
             "question": request.form['question'],
             "answer": request.form['answer']
         }
-    return render_template('add_question.html')
+
+        db.append(question_dict)
+        save_db()
+
+        return redirect(url_for(''))
+
+    else:
+        return render_template('add_question.html')
 
 
 if __name__ == '__main__':
