@@ -7,8 +7,9 @@ def load_db():
 
 
 def save_db():
-    with open('questions.json, 'w') as file:
+    with open('questions.json', 'w') as file:
         return json.dump(db, file)
 
 
 db = load_db()
+

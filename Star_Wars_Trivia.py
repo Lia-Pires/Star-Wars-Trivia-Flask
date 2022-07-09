@@ -47,7 +47,7 @@ def add_question():
         db.append(question_dict)
         save_db()
 
-        return redirect(url_for(''))
+        return redirect(url_for('questions_view', index=len(db) - 1))
 
     else:
         return render_template('add_question.html')
