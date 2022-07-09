@@ -18,10 +18,12 @@
       </div>
 
       <!-- Home Button -->
-        <button>
+        <!-- <button>
         <a href=" {{ url_for('home') }} ">Home</a>
-        </button>
+        </button> -->
         
+
+        <!-- Next Question Button -->
         <button>
             {% if index < max_index  %}
             <a href="{{ url_for('questions_view', index = index+1) }}">Next Question</a>
@@ -30,6 +32,15 @@
             {% endif %}
         </button>
      
+
+       
+        <div class="links">
+          <a href="{{ url_for('home') }}">Home</a>
+    
+          <a href="{{ url_for('remove_question', index=index)}}"
+            >Remove This Question</a
+          >
+        </div>
 
     </body>
 </html>

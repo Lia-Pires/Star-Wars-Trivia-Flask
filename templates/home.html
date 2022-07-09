@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Star Wars Trivia</h1>
+    <a class="new-question" href="{{ url_for('add_question') }}"> Add a New Question</a>
 
     <ul>
         {% for question in questions %}
