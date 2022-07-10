@@ -53,7 +53,7 @@ body {
 
 .answer p:hover {
     color: #7790d9;
-    cursor: auto;
+    cursor: default;
 }
 
 button {
