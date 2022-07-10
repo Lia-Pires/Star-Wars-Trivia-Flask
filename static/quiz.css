@@ -47,6 +47,11 @@ body {
 .answer p {
     text-align: center;
     font-size: 40px;
+    color: rgb(55,50,86, 0.1);
+    
+}
+
+.answer p:hover {
     color: #7790d9;
 }
 

@@ -50,7 +50,6 @@ label {
     text-align: center;
     margin-bottom: 30px;
     font-weight: 100;
-    background-color: none;
     border-radius: 30px;
     padding: 1px;
     background-color: rgb(158,159,158, 0.6);
@@ -59,13 +58,13 @@ label {
 input[type="text"] {
     height: 40px;
     outline: none;
-    background: none;
+    background-color: rgb(22,30,36,0.8);
     border: none;
-    border-bottom: 3px #161e24 solid;
-    border-left: 3px #161e24 solid;
+    border-bottom: 3px #9e9f9e solid;
+    border-left: 3px #9e9f9e solid;
     width: 600px;
     font-size: 30px;
-    color: #4f5154;
+    color: #9e9f9e;
     padding: 15px;
    
 }
